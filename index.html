@@ -7,50 +7,54 @@
     <link rel="stylesheet" href="progress_bar.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Daniel Mashid</title>
+    <div class="navbar">
+        <a href="#Top">Home</a>
+        <a href="#PersonalInfo">Personal Info</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Education">Education</a>
+        <a href="#WorkExperience">Work Experience</a>
+        <a href="#Recommendations">Recommendations</a>
+    </div>
 </head>
 <body>
-<div class="navbar">
-    <a href="#Top">Home</a>
-    <a href="#PersonalInfo">Personal Info</a>
-    <a href="#Skills">Skills</a>
-    <a href="#Education">Education</a>
-    <a href="#WorkExperience">Work Experience</a>
-    <a href="#Recommendations">Recommendations</a>
-</div>
 <div class="content">
     <div id="Top"></div>
-    <div id="PersonalInfo">
+    <div class="container" id="PersonalInfo">
         <div class="card">
-            <h4 class="card-header">my Information</h4>
-            <h6>Full Name --> Daniel Mashid</h6>
-            <h6>Phone Number --> 0502040114</h6>
-            <h6>Mail Address --> danielmashid1@gmail.com</h6>
-            <h6>Address</h6>
+            <h3 class="card-header">My Information</h3>
+            <h4><br>Full Name:     Daniel Mashid</br>
+                <br>Phone Number:  0502040114</br>
+                <br>Mail:  danielmashid1@gmail.com</br>
+                <br>Address:  Moshe Saret, Ashqelon</br>
+                </h4>
+            <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7057.013626304107!2d34.58331334218335!3d31.684210936956745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15029c19bf6c1e8f%3A0xfb29afd5e783e03e!2z157XqdeUINep16jXqiwg15DXqden15zXldefLCDXmdep16jXkNec!5e0!3m2!1siw!2sus!4v1618257383855!5m2!1siw!2sus" width="400" height="300"  allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
     </div>
-        <div id="Skills">
+    <div class="container" id="Skills">
             <div class="card">
                 <h3 class="card-header">
                     My Skills
                 </h3>
                 <div class="card-body">
-                    <h5>Java</h5>
+                    <h4>Java</h4>
                     <div class="meter" id="java">
                         <span style="width: 90%"></span>
                     </div>
-                    <h3>C++ , Python</h3>
+                    <h4>C++ , Python</h4>
                     <div class="meter" id="python">
                         <span style="width:80%"></span>
                     </div>
-                    <h3>C</h3>
+                    <h4>C</h4>
                     <div class="meter orange" id="clang">
                         <span style="width: 70%"></span>
                     </div>
-                    <h3>Assembly , HTML</h3>
+                    <h4>Assembly , HTML</h4>
                     <div class="meter orange" id="assembly">
                         <span style="width: 65%"></span>
                     </div>
-                    <h3>CSS , JavaScript</h3>
+                    <h4>CSS , JavaScript</h4>
                     <div class="meter red" id="weblang">
                         <span style="width: 40%"></span>
                     </div>
@@ -60,14 +64,71 @@
             </div>
         </div>
 
-        <!--Google map-->
-        <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-            <iframe src="https://goo.gl/maps/UB6bnwbUtgu7Eafc6" frameborder="0"
-                    style="border:0" allowfullscreen></iframe>
+      
+    <div class="container" id="Education">
+        <div class="card">
+            <br>
+            <h3 class="card-header">Education</h3>
+            <h4>2019-2022 Sapir Collage</h4>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.546282612504!2d34.596734285173206!3d31.50915288137336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502814a96e693ed%3A0xd2f92addc3834b6c!2z15TXnteb15zXnNeUINeU15DXp9eT157XmdeqINeh16TXmdeo!5e0!3m2!1siw!2sus!4v1618258370083!5m2!1siw!2sus" width="400" height="300" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <br>
+            <h4>2005-2011 Mekif Ironi Dalet</h4>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3395.2491182014332!2d34.581003685168334!3d31.681756981316497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15029c17400fed11%3A0xc91253ba194e5e25!2z157Xp9eZ16Mg16LXmdeo15XXoNeZINeTJy_XqdeT16jXldeqINeU16bXmdeV16DXldeq!5e0!3m2!1siw!2sus!4v1618258439781!5m2!1siw!2sus" width="400" height="300" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
-    <div class="Education"></div>
-    <div class="WorkExperience"></div>
-    <div class="Recommendations"></div>
+    </div>
+    <div class="container" id="WorkExperience">
+        <div class="card">
+            <h3 class="card-header">Work Experience</h3> 
+            <br><br><br>
+
+<table class="mytable">
+	<thead>
+		<tr>
+			<th><h1></h1></th>
+			<th><h1>Name</h1></th>
+			<th><h1>Address</h1></th>
+			<th><h1>Duration</h1></th>
+      <th><h1>Description</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+			<td>Elbit</td>
+			<td>Ashkelon</td>
+			<td>2014-2021</td>
+      <td>Security</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Gal Yam</td>
+			<td>Ashkelon</td>
+			<td>2010-2012</td>
+      <td>Surf instructor</td>
+		</tr>
+	</tbody>
+</table> 
+<br><br><br>
+        </div>
+    </div>  
+               
+
+    </div>
+    <div class="container" id="Recommendations">
+        <div class="card">
+            <h3 class="card-header">Recommendations</h3>
+            <h4>
+                Bar
+                <br>
+                :) :) :) 
+            </h4>
+
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </div>
