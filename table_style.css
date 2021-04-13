@@ -2,7 +2,7 @@
 .mytable th h1 {
     font-weight: bold;
     font-size: 1em;
-    text-align: left;
+    text-align: center;
     color: #09232f;
 }
 
@@ -22,11 +22,13 @@
 .mytable {
     text-align: left;
     overflow: hidden;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     display: table;
     padding: 0 0 8em 0;
     font-size: 20px;
+    white-space: nowrap;
+
 }
 
 .mytable td,
@@ -47,7 +49,7 @@
 }
 
 .mytable th {
-    background-color: #638ae8;
+    background-color:#8f949f;
 }
 
 .mytable td:first-child {
@@ -62,12 +64,12 @@
 }
 
 .mytable td:hover {
-    background-color: #c4c057;
+    background-color:mintcream;
     color: #403e10;
     font-weight: bold;
 
-    box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px,
-    #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
+    box-shadow: #333333 -1px 1px, #333333 -2px 2px, #333333 -3px 3px,
+    #333333 -4px 4px, #333333 -5px 5px, #333333 -6px 6px;
     transform: translate3d(6px, -6px, 0);
 
     transition-delay: 0s;

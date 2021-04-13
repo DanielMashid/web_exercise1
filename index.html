@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Daniel Mashid</title>
-    <div class="navbar">
+    <div class="navbar navbar-default navbar-static-top">
         <a href="#Top">Home</a>
         <a href="#PersonalInfo">Personal Info</a>
         <a href="#Skills">Skills</a>
@@ -17,21 +17,30 @@
         <a href="#WorkExperience">Work Experience</a>
         <a href="#Recommendations">Recommendations</a>
     </div>
+    <script>
+        var shiftWindow = function() { scrollBy(0, -150) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
 </head>
 <body>
 <div class="content">
     <div id="Top"></div>
-    <div class="container" id="PersonalInfo">
+      <div class="container" id="PersonalInfo">
         <div class="card">
             <h3 class="card-header">My Information</h3>
-            <h4><br> <i style="font-size:24px" class="fa">&#xf2be;</i>  Daniel Mashid</br>
+            <div  class=left-half">
+            <h4><br> <i style="font-size:24px" class="fa">&#xf2be;</i>  Daniel Mashid </br>
                 <br><i style="font-size:24px" class="fa">&#xf095;</i>    <a href="tel:0502040114">0502040114</a></br>
                 <br><i style="font-size:24px" class="fa">&#xf0e0;</i>   <a href="mailto:danielmashid1@gmail.com">danielmashid1@gmail.com</a></br>
                 <br><i style="font-size:24px" class="fa">&#xf041;</i>   <a href="https://goo.gl/maps/Pqa2KNzQMT9JN4759"> Ashqelon</a></br>
+            </h4></div>
+            <div class="right-half">
                 <img src="picture/profile-Daniel.jfif" alt="Trulli" >
-                </h4>
+            </div>
         </div>
-    </div>
+      </div>
+
     <div class="container" id="Skills">
             <div class="card">
                 <h3 class="card-header">
@@ -67,16 +76,19 @@
       
     <div class="container" id="Education">
         <div class="card">
-            <br>
+
             <h3 class="card-header">Education</h3>
-            <h4>2019-2022 Sapir Collage</h4>
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.546282612504!2d34.596734285173206!3d31.50915288137336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502814a96e693ed%3A0xd2f92addc3834b6c!2z15TXnteb15zXnNeUINeU15DXp9eT157XmdeqINeh16TXmdeo!5e0!3m2!1siw!2sus!4v1618258370083!5m2!1siw!2sus" width="400" height="300" allowfullscreen="" loading="lazy"></iframe>
+            <div class="left-part">
+                <h4><br>2019-2022 <br>Sapir Collage</h4>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.546282612504!2d34.596734285173206!3d31.50915288137336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502814a96e693ed%3A0xd2f92addc3834b6c!2z15TXnteb15zXnNeUINeU15DXp9eT157XmdeqINeh16TXmdeo!5e0!3m2!1siw!2sus!4v1618258370083!5m2!1siw!2sus"  allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
-            <br>
-            <h4>2005-2011 Mekif Ironi Dalet</h4>
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3395.2491182014332!2d34.581003685168334!3d31.681756981316497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15029c17400fed11%3A0xc91253ba194e5e25!2z157Xp9eZ16Mg16LXmdeo15XXoNeZINeTJy_XqdeT16jXldeqINeU16bXmdeV16DXldeq!5e0!3m2!1siw!2sus!4v1618258439781!5m2!1siw!2sus" width="400" height="300" allowfullscreen="" loading="lazy"></iframe>
+            <div class="right-part">
+                <h4>2005-2011 <br>Mekif Ironi Dalet</h4>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3395.2491182014332!2d34.581003685168334!3d31.681756981316497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15029c17400fed11%3A0xc91253ba194e5e25!2z157Xp9eZ16Mg16LXmdeo15XXoNeZINeTJy_XqdeT16jXldeqINeU16bXmdeV16DXldeq!5e0!3m2!1siw!2sus!4v1618258439781!5m2!1siw!2sus"  allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </div>
@@ -103,18 +115,18 @@
             <td><img src="picture/Elbit_Systems.png" alt="Trulli" ></td>
             <td>Elbit</td>
 			<td>Ashkelon</td>
-			<td>Security - Shift Manager</td>
+			<td>Security -<br>Shift Manager</td>
 			<td>2015-2021</td>
-      <td>•	Managing the security guards and the work arrangement</td>
+      <td>Managing the security<br>guardsand the work<br>arrangement</td>
 		</tr>
 		<tr>
 			<td></td>
             <td><img src="picture/picture-zvolon.jpg" alt="Trulli" ></td>
-            <td>Zevulun Carpentry</td>
+            <td>Zevulun<br>Carpentry</td>
             <td>Ashkelon</td>
-            <td>Carpenter's assistant</td>
+            <td>Carpenter's<br>assistant</td>
             <td>2014-2015</td>
-            <td>Work with raw materials until product creation</td>
+            <td>Work with raw materials<br>until product creation</td>
 		</tr>
         <tr>
             <td></td>
@@ -123,16 +135,14 @@
             <td>Ashkelon</td>
             <td>Surf instructor</td>
             <td>2009-2011</td>
-            <td>Wave surf training for groups of kids</td>
+            <td>Wave surf training <br>for groups of kids</td>
         </tr>
 	</tbody>
 </table> 
 <br><br><br>
         </div>
     </div>  
-               
 
-    </div>
     <div class="container" id="Recommendations">
         <div class="card">
             <h3 class="card-header">Recommendations</h3>
