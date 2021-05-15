@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="progress_bar.css" />
+    <!--<link rel="stylesheet" href="progress_bar.css" />-->
     <link rel="stylesheet" href="table_style.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,12 +16,9 @@
         <a href="#Education">Education</a>
         <a href="#WorkExperience">Work Experience</a>
         <a href="#Recommendations">Recommendations</a>
+        <a href="#Contact-me">Contact-me</a>
     </div>
-    <script>
-        var shiftWindow = function() { scrollBy(0, -150) };
-        window.addEventListener("hashchange", shiftWindow);
-        function load() { if (window.location.hash) shiftWindow(); }
-    </script>
+
 </head>
 <body>
 <div class="content">
@@ -30,13 +27,18 @@
         <div class="card">
             <h3 class="card-header">My Information</h3>
             <div  class=left-half">
-            <h4><br> <i style="font-size:24px" class="fa">&#xf2be;</i>  Daniel Mashid </br>
-                <br><i style="font-size:24px" class="fa">&#xf095;</i>    <a href="tel:0502040114">0502040114</a></br>
-                <br><i style="font-size:24px" class="fa">&#xf0e0;</i>   <a href="mailto:danielmashid1@gmail.com">danielmashid1@gmail.com</a></br>
-                <br><i style="font-size:24px" class="fa">&#xf041;</i>   <a href="https://goo.gl/maps/Pqa2KNzQMT9JN4759"> Ashqelon</a></br>
+            <h4><br> <i class="fa">&#xf2be;</i>  Daniel Mashid </br>
+                <br> <i class="fa">&#xf095;</i>    <a href="tel:0502040114">0502040114</a></br>
+                <br> <i class="fa">&#xf0e0;</i>   <a href="mailto:danielmashid1@gmail.com?subject=Hi Daniel&body=Dear Daniel,">danielmashid1@gmail.com</a></br>
+                <br> <i class="fa">&#xf041;</i>   <a href="https://goo.gl/maps/Pqa2KNzQMT9JN4759"> Ashqelon</a></br>
             </h4></div>
             <div class="right-half">
-                <img src="picture/profile-Daniel.jfif" alt="Trulli" >
+                <img id="myImg" src="picture/profile-Daniel.jfif" alt="My Pic" >
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
             </div>
         </div>
       </div>
@@ -47,33 +49,32 @@
                     My Skills
                 </h3>
                 <div class="card-body">
-                    <h4>Java</h4>
-                    <div class="meter" id="java">
-                        <span style="width: 90%"></span>
-                    </div>
-                    <h4>C++ , Python</h4>
-                    <div class="meter" id="python">
-                        <span style="width:80%"></span>
-                    </div>
-                    <h4>C</h4>
-                    <div class="meter orange" id="clang">
-                        <span style="width: 70%"></span>
-                    </div>
-                    <h4>Assembly</h4>
-                    <div class="meter orange" id="assembly">
-                        <span style="width: 65%"></span>
-                    </div>
-                    <h4>HTML, CSS, JavaScript</h4>
-                    <div class="meter red" id="weblang">
-                        <span style="width: 40%"></span>
+                    <h5>Java</h5>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" id = "java-bar"></div>
                     </div>
 
+                    <h5>C++</h5>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" id = "cpp-bar"></div>
+                    </div>
 
+                    <h5>Assembly</h5>
+                    <div class="progress" >
+                        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" id = "assembly-bar"></div>
+                    </div>
+
+                    <h5>Python</h5>
+                    <div class="progress" >
+                        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" id = "python-bar"></div>
+                    </div>
                 </div>
             </div>
         </div>
-
-      
     <div class="container" id="Education">
         <div class="card">
             <h3 class="card-header">Education</h3>
@@ -95,11 +96,6 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-            <!--<       !&#45;&#45;<div class="right-part">&ndash;&gt;-->
-                    <!--<h4>2005-2011 <br></h4>-->
-                    <!--<div>-->
-                        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3395.2491182014332!2d34.581003685168334!3d31.681756981316497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15029c17400fed11%3A0xc91253ba194e5e25!2z157Xp9eZ16Mg16LXmdeo15XXoNeZINeTJy_XqdeT16jXldeqINeU16bXmdeV16DXldeq!5e0!3m2!1siw!2sus!4v1618258439781!5m2!1siw!2sus"  allowfullscreen="" loading="lazy"></iframe>-->
-                    <!--</div>-->
                     <ul class="list-group list-group-flush">
 
                         <li class="list-group-item">Mekif Ironi Dalet</li>
@@ -165,8 +161,7 @@
 </table> 
 <br><br><br>
         </div>
-    </div>  
-
+    </div>
     <div class="container" id="Recommendations">
         <div class="card">
             <h3 class="card-header">Recommendations</h3>
@@ -205,6 +200,42 @@
 
         </div>
     </div>
+    <div class="container" contact-form id="Contact-me">
+        <div class="card">
+            <h3 class="card-header">Contact-me</h3>
+            <br>
+            <h4>Do you have any questions? Please do not hesitate to contact me directly.</h4>
+            <br>
+                <form method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input required type="text" name="txtName" class="form-control" placeholder="Your Name" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" required type="text" name="txtEmail" class="form-control" placeholder="Your Email" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" required type="text" name="txtPhone" class="form-control" placeholder="Your Subject" value="" />
+                            </div>
+                            <div class="form-group">
+                                <textarea required id="text-area" name="txtMsg" class="form-control" maxlength="200" placeholder="Your Message"></textarea>
+                                <span id="current_chars">0</span>
+                                <span id="maximum_chars">/ 200</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Return to top</button>
 
     <script src="script.js"></script>
 </div>
